@@ -2,10 +2,14 @@ import React from 'react';
 
 import {Button, SparkLineChart, StackedChart} from "../components";
 import {GoPrimitiveDot} from "react-icons/go";
+
 import {earningData, SparklineAreaData} from "../data/dummy";
+import {useStateContext} from "../contexts/ContextProvider";
 
 
 const ECommerce = () => {
+    const {currentColor} = useStateContext();
+
     return (
         <div className="mt-24">
             <div className="flex flex-wrap lg:flex-nowrap justify-center ">
@@ -18,7 +22,7 @@ const ECommerce = () => {
                         </div>
                     </div>
                     <div className="mt-6">
-                        <Button color="white" bgColor="blue" text="Download" textSize="md" borderRadius="10px"/>
+                        <Button color="white" bgColor={currentColor} text="Download" textSize="md" borderRadius="10px"/>
                     </div>
                 </div>
                 <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
@@ -71,11 +75,11 @@ const ECommerce = () => {
                                 <p className="text-gray-500 mt-1">Expense</p>
                             </div>
                             <div className="mt-5">
-                                <SparkLineChart currentColor="blue" id="line-sparkline" type="Line" height="80px"
-                                                width="250px" data={SparklineAreaData} color="blue"/>
+                                <SparkLineChart currentColor={currentColor} id="line-sparkline" type="Line" height="80px"
+                                                width="250px" data={SparklineAreaData} color={currentColor}/>
                             </div>
                             <div className="mt-10">
-                                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px"/>
+                                <Button color="white" bgColor={currentColor} text="Download Report" borderRadius="10px"/>
                             </div>
                         </div>
                         <div>
