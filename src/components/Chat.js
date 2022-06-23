@@ -22,7 +22,7 @@ const Chat = () => {
                     {chatData.map((item, index) => (<ChatItem key={index} {...item}/>))}
                 </div>
                 <div className="flex flex-col my-2 px-4 py-1.5">
-                    <button type="button" className="py-2 rounded-md text-base text-white" style={{backgroundColor:currentColor}}>See all messages</button>
+                    <button type="button" className="py-2.5 rounded-md text-base text-white" style={{backgroundColor:currentColor}}>See all messages</button>
                 </div>
             </div>
         </div>
