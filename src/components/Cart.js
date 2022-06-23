@@ -10,7 +10,7 @@ const Cart = () => {
     return (
         <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 flex justify-between">
             <span className="flex flex-grow h-screen" onClick={() => handleClick('cart')}/>
-            <div className="flex flex-col flex-shrink-0 h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400">
+            <div className="flex flex-col flex-shrink-0 h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] sm:w-400">
                 <div className="flex justify-between items-center p-4 ml-4">
                     <p className="font-semibold text-xl">Shopping Cart</p>
                     <button type="button" onClick={() => handleClick('cart')} style={{color: 'rgb(153,171,180)'}}
@@ -45,10 +45,10 @@ const Cart = () => {
 const CartItem = ({name, category, image, price}) => {
     const {currentColor} = useStateContext();
 
-    return (<div className="flex px-6 py-3 mx-4 border-b-1 border-color">
+    return (<div className="flex px-6 py-3 mx-3 border-b-1 border-color">
         <img
             src={image}
-            alt="item-1" className="w-24 h-24"/>
+            alt={name} className="my-1.5 w-24 h-20 rounded-md"/>
         <div className="ml-3 items-start w-full h-full">
             <h2 className="text-base font-semibold">{name}</h2>
             <p className="text-sm font-semibold text-gray-500">{category}</p>
