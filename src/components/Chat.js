@@ -11,7 +11,7 @@ const Chat = () => {
         <div className="w-auto h-auto fixed nav-item top-16 right-5 md:right-24 lg:right-56 flex shadow-2xl">
             <div className="flex flex-col flex-shrink-0 rounded-md dark:text-gray-200 bg-white dark:bg-[#484B52] w-[350px]">
                 <div className="flex justify-between items-center p-4 ml-4">
-                    <p className="font-semibold text-md">Messages</p>
+                    <p className="font-semibold text-base">Messages</p>
                     <button type="button" onClick={() => handleClick('chat')} style={{color: 'rgb(153,171,180)'}}
                             className="text-xl p-2 hover:drop-shadow-xl hover:bg-light-gray rounded-full">
                         <MdOutlineCancel/>
