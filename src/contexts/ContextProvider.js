@@ -2,13 +2,13 @@ import React, {createContext, useContext, useState} from 'react';
 
 const StateContext = createContext();
 
-const initailState = {
-    chat: false, cart: false, useProfile: false, notification: false
+const initialState = {
+    chat: false, cart: false, userProfile: false, notification: false
 };
 
 export const ContextProvider = ({children}) => {
     const [activeMenu, setActiveMenu] = useState(true);
-    const [isClicked, setIsClicked] = useState(initailState);
+    const [isClicked, setIsClicked] = useState(initialState);
     const [screenSize, setScreenSize] = useState(undefined);
     const [currentColor, setCurrentColor] = useState('#03C9D7');
     const [currentMode, setCurrentMode] = useState('Light');
@@ -27,7 +27,7 @@ export const ContextProvider = ({children}) => {
     }
 
     const handleClick = (clicked) => {
-        setIsClicked(prevState => ({...prevState, [clicked]: !prevState[clicked]}));
+        setIsClicked(prevState => ({...initialState, [clicked]: !prevState[clicked]}));
     }
 
     return (<StateContext.Provider
